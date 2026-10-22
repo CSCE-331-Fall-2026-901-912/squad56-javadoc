@@ -106,6 +106,8 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OrderDAO</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Reads order history and reports, and persists orders with their items,
+ modifications, and related inventory deductions.</div>
 </div>
 </section>
 <section class="summary">
@@ -121,7 +123,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#MAX_PAGE_SIZE" class="member-name-link">MAX_PAGE_SIZE</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Maximum page size accepted by <a href="#getOrders(app.model.OrderFilters,int,int)"><code>getOrders(OrderFilters, int, int)</code></a>.</div>
+</div>
 </div>
 </section>
 </li>
@@ -153,50 +157,76 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bindDateRange(java.sql.PreparedStatement,java.time.LocalDate,java.time.LocalDate)" class="member-name-link">bindDateRange</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Binds the start-of-day inclusive and day-after-end exclusive timestamps
+ to the first two placeholders of a query.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bindFilters(java.sql.PreparedStatement,app.model.OrderFilters)" class="member-name-link">bindFilters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt,
  <a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Binds values corresponding to the active conditions in an order filter.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildWhereClause(app.model.OrderFilters)" class="member-name-link">buildWhereClause</a><wbr>(<a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds SQL conditions for the non-null fields in the order filters.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#countOrders(app.model.OrderFilters)" class="member-name-link">countOrders</a><wbr>(<a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Counts orders matching the supplied filters.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/SalesTrendRow.html" title="class in app.model">SalesTrendRow</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDailySales(java.sql.Connection,java.time.LocalDate,java.time.LocalDate)" class="member-name-link">getDailySales</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Aggregates daily sales revenue, excluding tax, over the inclusive date
+ range and orders results chronologically.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/EmployeeSales.html" title="class in app.model">EmployeeSales</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmployeeSales(java.sql.Connection,java.time.LocalDate,java.time.LocalDate)" class="member-name-link">getEmployeeSales</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Aggregates order counts and sales revenue before tax by employee.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/Order.html" title="class in app.model">Order</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrders(app.model.OrderFilters,int,int)" class="member-name-link">getOrders</a><wbr>(<a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters,
  int&nbsp;limit,
  int&nbsp;offset)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves a page of orders matching the supplied filters, newest first.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/PaymentMethodSales.html" title="class in app.model">PaymentMethodSales</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaymentMethodSales(java.sql.Connection,java.time.LocalDate,java.time.LocalDate)" class="member-name-link">getPaymentMethodSales</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Aggregates order counts and sales revenue before tax by payment type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/SalesReportRow.html" title="class in app.model">SalesReportRow</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSalesByItem(java.sql.Connection,java.time.LocalDate,java.time.LocalDate)" class="member-name-link">getSalesByItem</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Aggregates item quantities, sales revenue, ingredient cost, and estimated
+ gross profit for the inclusive date range.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/SalesReportData.html" title="class in app.model">SalesReportData</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSalesReport(java.time.LocalDate,java.time.LocalDate)" class="member-name-link">getSalesReport</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds sales-report data for the inclusive date range, including item,
+ daily, payment-method, and employee breakdowns and summary totals.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextId(java.sql.Connection,java.lang.String)" class="member-name-link">nextId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sql)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Executes a scalar identifier query using a caller-owned connection.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveOrder(int,java.lang.String,java.lang.String,java.math.BigDecimal,java.math.BigDecimal,java.util.List)" class="member-name-link">saveOrder</a><wbr>(int&nbsp;employeeId,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerName,
@@ -204,11 +234,16 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;totalCost,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;salesTax,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderItem.html" title="class in app.model">OrderItem</a>&gt;&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Saves an order, its items and modifications, and their inventory
+ deductions in one database transaction.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validatePage(int,int)" class="member-name-link">validatePage</a><wbr>(int&nbsp;limit,
  int&nbsp;offset)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Validates the requested order-history page bounds.</div>
+</div>
 </div>
 </div>
 </div>
@@ -231,6 +266,7 @@ loadScripts(document, 'script');</script>
 <h3>MAX_PAGE_SIZE</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MAX_PAGE_SIZE</span></div>
+<div class="block">Maximum page size accepted by <a href="#getOrders(app.model.OrderFilters,int,int)"><code>getOrders(OrderFilters, int, int)</code></a>.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -274,9 +310,26 @@ loadScripts(document, 'script');</script>
  int&nbsp;limit,
  int&nbsp;offset)</span>
                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Retrieves a page of orders matching the supplied filters, newest first.
+
+ <p>Orders are sorted by timestamp descending, then identifier descending.
+ The requested limit must be between <code>1</code> and <code>500</code>; the offset
+ is zero-based. The method obtains and closes its own database connection.</p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filters</code> - optional order filters; individual null filter values are ignored</dd>
+<dd><code>limit</code> - maximum number of orders to return</dd>
+<dd><code>offset</code> - number of matching rows to skip</dd>
+<dt>Returns:</dt>
+<dd>matching orders on the requested page, or an empty list when no
+         rows match that page</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if database access or query execution fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if <code>limit</code> is outside
+         <code>1..500</code> or <code>offset</code> is negative</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>filters</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if an end-date filter is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -287,9 +340,17 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">countOrders</span><wbr><span class="parameters">(<a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</span>
                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Counts orders matching the supplied filters.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filters</code> - filters to apply; individual null filter values are ignored</dd>
+<dt>Returns:</dt>
+<dd>number of matching orders</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if database access or query execution fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>filters</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if an end-date filter is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -301,9 +362,30 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/SalesReportData.html" title="class in app.model">SalesReportData</a></span>&nbsp;<span class="element-name">getSalesReport</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Builds sales-report data for the inclusive date range, including item,
+ daily, payment-method, and employee breakdowns and summary totals.
+
+ <p>Database timestamps are filtered from the start of <code>startDate</code>
+ through, but not including, the start of the day after <code>endDate</code>.
+ Revenue and average order value exclude sales tax. Estimated ingredient
+ cost and gross profit are reported only when all required recipe and
+ modification costs are available; otherwise the estimated profit in the
+ summary is <code>null</code> and its completeness flag is false. The method
+ uses one connection for its report queries and closes that connection
+ before returning.</p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
+<dt>Returns:</dt>
+<dd>report data with empty breakdown lists and zero sales/order
+         totals when no orders match</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if database access or any report query fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if either date is <code>null</code> or
+         <code>startDate</code> is after <code>endDate</code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -316,9 +398,25 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Aggregates item quantities, sales revenue, ingredient cost, and estimated
+ gross profit for the inclusive date range.
+
+ <p>Rows are sorted by revenue descending, then quantity sold descending,
+ then item name ascending. Revenue includes recorded modification prices
+ and excludes sales tax. Cost and profit are <code>null</code> for a row when
+ any required item or modification ingredient cost is unavailable. The
+ supplied connection remains owned by the caller.</p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conn</code> - open connection to use for the query</dd>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
+<dt>Returns:</dt>
+<dd>aggregated rows, possibly empty</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if preparing or executing the query fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -331,9 +429,19 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Aggregates daily sales revenue, excluding tax, over the inclusive date
+ range and orders results chronologically.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conn</code> - open connection to use for the query</dd>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
+<dt>Returns:</dt>
+<dd>one row per date with matching orders, possibly empty</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if preparing or executing the query fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -346,9 +454,19 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Aggregates order counts and sales revenue before tax by payment type.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conn</code> - open connection to use for the query</dd>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
+<dt>Returns:</dt>
+<dd>payment-method aggregates ordered by revenue descending and then
+         payment type, possibly empty</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if preparing or executing the query fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -361,9 +479,19 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Aggregates order counts and sales revenue before tax by employee.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conn</code> - open connection to use for the query</dd>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
+<dt>Returns:</dt>
+<dd>employee aggregates ordered by revenue descending, order count
+         descending, then employee name, possibly empty</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if preparing or executing the query fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -376,9 +504,17 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span>
                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Binds the start-of-day inclusive and day-after-end exclusive timestamps
+ to the first two placeholders of a query.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stmt</code> - prepared statement whose first two placeholders are the date range</dd>
+<dd><code>startDate</code> - first calendar date to include</dd>
+<dd><code>endDate</code> - last calendar date to include</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if either timestamp cannot be bound</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>endDate</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -388,6 +524,21 @@ loadScripts(document, 'script');</script>
 <h3>buildWhereClause</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">buildWhereClause</span><wbr><span class="parameters">(<a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</span></div>
+<div class="block">Builds SQL conditions for the non-null fields in the order filters.
+
+ <p>Customer name and payment type use case-insensitive substring
+ matching; employee ID uses equality. The start date is inclusive, while
+ the end date is inclusive by calendar day through a next-day exclusive
+ timestamp bound.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>filters</code> - order filters to inspect</dd>
+<dt>Returns:</dt>
+<dd>an empty string when no filters are set, or a <code>WHERE</code>
+         clause containing parameter placeholders</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>filters</code> is <code>null</code></dd>
+</dl>
 </div>
 </section>
 </li>
@@ -398,9 +549,19 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">bindFilters</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt,
  <a href="../model/OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Binds values corresponding to the active conditions in an order filter.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stmt</code> - prepared statement whose placeholders match
+             <a href="#buildWhereClause(app.model.OrderFilters)"><code>buildWhereClause(OrderFilters)</code></a></dd>
+<dd><code>filters</code> - order filters whose non-null values are bound</dd>
+<dt>Returns:</dt>
+<dd>the one-based parameter index following the last bound value</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if a parameter value cannot be bound</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>filters</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if an end-date filter is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>
@@ -411,6 +572,15 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">validatePage</span><wbr><span class="parameters">(int&nbsp;limit,
  int&nbsp;offset)</span></div>
+<div class="block">Validates the requested order-history page bounds.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>limit</code> - requested maximum number of rows</dd>
+<dd><code>offset</code> - requested number of rows to skip</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if <code>limit</code> is less than one or
+         greater than <code>MAX_PAGE_SIZE</code>, or if <code>offset</code> is negative</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -424,6 +594,28 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;totalCost,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;salesTax,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/OrderItem.html" title="class in app.model">OrderItem</a>&gt;&nbsp;items)</span></div>
+<div class="block">Saves an order, its items and modifications, and their inventory
+ deductions in one database transaction.
+
+ <p>Identifiers are selected as the current maximum plus one. A SQL
+ failure is rolled back, printed, and represented by <code>-1</code>; a
+ successful commit returns the assigned order identifier. The method
+ creates and closes its own connection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employeeId</code> - identifier of the employee recording the order</dd>
+<dd><code>customerName</code> - customer name to store with the order</dd>
+<dd><code>paymentType</code> - payment method to store with the order</dd>
+<dd><code>totalCost</code> - total amount collected, including tax</dd>
+<dd><code>salesTax</code> - tax included in <code>totalCost</code></dd>
+<dd><code>items</code> - order lines and their selected modifications</dd>
+<dt>Returns:</dt>
+<dd>the new order identifier, or <code>-1</code> if a SQL failure prevents
+         the transaction from completing</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>items</code>, an order item, or a
+         modification accessed while saving is <code>null</code></dd>
+</dl>
 </div>
 </section>
 </li>
@@ -434,9 +626,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">nextId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/Connection.html" title="class or interface in java.sql" class="external-link">Connection</a>&nbsp;conn,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sql)</span>
             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Executes a scalar identifier query using a caller-owned connection.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conn</code> - open connection to use for the query</dd>
+<dd><code>sql</code> - SQL expected to return the identifier in its first column</dd>
+<dt>Returns:</dt>
+<dd>integer value from the first row and first column</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if preparing or executing the query fails, or if no
+         result row is available</dd>
 </dl>
 </div>
 </section>

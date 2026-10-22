@@ -78,7 +78,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private <a href="../OrderFilters.html" title="class in app.model">OrderFilters</a></code></div>
 <div class="col-second even-row-color"><span class="type-name-label">OrderHistoryController.</span><code><a href="../../controller/manager/OrderHistoryController.html#readFilters()" class="member-name-link">readFilters</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Reads and validates the filter controls.</div>
+</div>
 </div>
 </section>
 </li>
@@ -93,18 +95,26 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private int</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">OrderDAO.</span><code><a href="../../dao/OrderDAO.html#bindFilters(java.sql.PreparedStatement,app.model.OrderFilters)" class="member-name-link">bindFilters</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt,
  <a href="../OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Binds values corresponding to the active conditions in an order filter.</div>
+</div>
 <div class="col-first odd-row-color"><code>private <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">OrderDAO.</span><code><a href="../../dao/OrderDAO.html#buildWhereClause(app.model.OrderFilters)" class="member-name-link">buildWhereClause</a><wbr>(<a href="../OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Builds SQL conditions for the non-null fields in the order filters.</div>
+</div>
 <div class="col-first even-row-color"><code>int</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">OrderDAO.</span><code><a href="../../dao/OrderDAO.html#countOrders(app.model.OrderFilters)" class="member-name-link">countOrders</a><wbr>(<a href="../OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Counts orders matching the supplied filters.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../Order.html" title="class in app.model">Order</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">OrderDAO.</span><code><a href="../../dao/OrderDAO.html#getOrders(app.model.OrderFilters,int,int)" class="member-name-link">getOrders</a><wbr>(<a href="../OrderFilters.html" title="class in app.model">OrderFilters</a>&nbsp;filters,
  int&nbsp;limit,
  int&nbsp;offset)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Retrieves a page of orders matching the supplied filters, newest first.</div>
+</div>
 </div>
 </section>
 </li>

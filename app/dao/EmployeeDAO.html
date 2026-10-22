@@ -93,6 +93,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">EmployeeDAO</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Provides database operations for retrieving and modifying employee records and credentials.</div>
+<dl class="notes">
+<dt>Author:</dt>
+<dd>Olivia Tserng</dd>
+</dl>
 </div>
 </section>
 <section class="summary">
@@ -127,24 +132,36 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  int&nbsp;disciplinePoints)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Inserts a new employee record with the supplied details.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteEmployee(int)" class="member-name-link">deleteEmployee</a><wbr>(int&nbsp;employeeId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Deletes the employee record with the specified ID.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/Employee.html" title="class in app.model">Employee</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAllEmployees()" class="member-name-link">getAllEmployees</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves all employee records ordered by employee ID.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../model/Employee.html" title="class in app.model">Employee</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#login(java.lang.String,java.lang.String)" class="member-name-link">login</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Finds an employee matching the supplied username and password.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateEmployee(app.model.Employee)" class="member-name-link">updateEmployee</a><wbr>(<a href="../model/Employee.html" title="class in app.model">Employee</a>&nbsp;employee)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the stored name, position, username, and discipline points of an employee.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updatePassword(int,java.lang.String)" class="member-name-link">updatePassword</a><wbr>(int&nbsp;employeeId,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;newPassword)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replaces the password stored for the specified employee.</div>
+</div>
 </div>
 </div>
 </div>
@@ -183,6 +200,11 @@ loadScripts(document, 'script');</script>
 <h3>getAllEmployees</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/Employee.html" title="class in app.model">Employee</a>&gt;</span>&nbsp;<span class="element-name">getAllEmployees</span>()</div>
+<div class="block">Retrieves all employee records ordered by employee ID.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the employee records retrieved, or an empty list if none were found</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -195,6 +217,15 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password,
  int&nbsp;disciplinePoints)</span></div>
+<div class="block">Inserts a new employee record with the supplied details.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - employee name</dd>
+<dd><code>position</code> - employee position</dd>
+<dd><code>username</code> - employee username</dd>
+<dd><code>password</code> - employee password</dd>
+<dd><code>disciplinePoints</code> - employee discipline points</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -203,6 +234,11 @@ loadScripts(document, 'script');</script>
 <h3>updateEmployee</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateEmployee</span><wbr><span class="parameters">(<a href="../model/Employee.html" title="class in app.model">Employee</a>&nbsp;employee)</span></div>
+<div class="block">Updates the stored name, position, username, and discipline points of an employee.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employee</code> - employee containing the values to store</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -212,6 +248,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updatePassword</span><wbr><span class="parameters">(int&nbsp;employeeId,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;newPassword)</span></div>
+<div class="block">Replaces the password stored for the specified employee.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employeeId</code> - ID of the employee whose password should be updated</dd>
+<dd><code>newPassword</code> - replacement password</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -220,6 +262,11 @@ loadScripts(document, 'script');</script>
 <h3>deleteEmployee</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteEmployee</span><wbr><span class="parameters">(int&nbsp;employeeId)</span></div>
+<div class="block">Deletes the employee record with the specified ID.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employeeId</code> - ID of the employee to delete</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -229,6 +276,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../model/Employee.html" title="class in app.model">Employee</a></span>&nbsp;<span class="element-name">login</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
+<div class="block">Finds an employee matching the supplied username and password.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>username</code> - username to authenticate</dd>
+<dd><code>password</code> - password to authenticate</dd>
+<dt>Returns:</dt>
+<dd>the matching employee, or <code>null</code> if no match is found or a database error occurs</dd>
+</dl>
 </div>
 </section>
 </li>

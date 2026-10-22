@@ -131,6 +131,10 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OrderHistoryController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Controls the manager's searchable, paginated order-history table.
+
+ <p>Order retrieval runs on a background task so the JavaFX application
+ thread remains responsive while the database is queried.</p></div>
 </div>
 </section>
 <section class="summary">
@@ -146,7 +150,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private static final record&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="OrderHistoryController.PageResult.html" class="type-name-link" title="class in app.controller.manager">OrderHistoryController.PageResult</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Result returned by a page-loading task.</div>
+</div>
 </div>
 </section>
 </li>
@@ -161,85 +167,139 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private javafx.concurrent.Task<wbr>&lt;<a href="OrderHistoryController.PageResult.html" title="class in app.controller.manager">OrderHistoryController.PageResult</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#activeLoad" class="member-name-link">activeLoad</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Background task currently loading an order-history page, if any.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second odd-row-color"><code><a href="#applyFiltersButton" class="member-name-link">applyFiltersButton</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Button that applies the current filter values.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second even-row-color"><code><a href="#clearFiltersButton" class="member-name-link">clearFiltersButton</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button that clears all filters and reloads the first page.</div>
+</div>
 <div class="col-first odd-row-color"><code>private int</code></div>
 <div class="col-second odd-row-color"><code><a href="#currentPage" class="member-name-link">currentPage</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Zero-based index of the page currently displayed.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#customerColumn" class="member-name-link">customerColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column displaying each order's customer name.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TextField</code></div>
 <div class="col-second odd-row-color"><code><a href="#customerFilter" class="member-name-link">customerFilter</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Text input used to filter orders by customer name.</div>
+</div>
 <div class="col-first even-row-color"><code>private static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#DEFAULT_PAGE_SIZE" class="member-name-link">DEFAULT_PAGE_SIZE</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Number of orders shown per page when the view is first opened.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TextField</code></div>
 <div class="col-second odd-row-color"><code><a href="#employeeFilter" class="member-name-link">employeeFilter</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Text input used to filter orders by employee identifier.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#employeeIdColumn" class="member-name-link">employeeIdColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column displaying the employee who handled each order.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.DatePicker</code></div>
 <div class="col-second odd-row-color"><code><a href="#endDateFilter" class="member-name-link">endDateFilter</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Optional inclusive upper bound for the order date filter.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.ProgressIndicator</code></div>
 <div class="col-second even-row-color"><code><a href="#loadingIndicator" class="member-name-link">loadingIndicator</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Indicator shown while orders are being loaded.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second odd-row-color"><code><a href="#nextPageButton" class="member-name-link">nextPageButton</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Button for navigating to the following page.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="../../dao/OrderDAO.html" title="class in app.dao">OrderDAO</a></code></div>
 <div class="col-second even-row-color"><code><a href="#orderDAO" class="member-name-link">orderDAO</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Data-access object used to count and retrieve matching orders.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#orderIdColumn" class="member-name-link">orderIdColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column displaying each order's identifier.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableView<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#orderTable" class="member-name-link">orderTable</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Table containing the current page of orders.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.ComboBox<wbr>&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#pageSizeSelector" class="member-name-link">pageSizeSelector</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Selector for the number of orders displayed on each page.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#paymentColumn" class="member-name-link">paymentColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column displaying each order's payment type.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TextField</code></div>
 <div class="col-second odd-row-color"><code><a href="#paymentFilter" class="member-name-link">paymentFilter</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Text input used to filter orders by payment type.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second even-row-color"><code><a href="#previousPageButton" class="member-name-link">previousPageButton</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button for navigating to the preceding page.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second odd-row-color"><code><a href="#refreshButton" class="member-name-link">refreshButton</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Button that reloads the first page using the current filters.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.DatePicker</code></div>
 <div class="col-second even-row-color"><code><a href="#startDateFilter" class="member-name-link">startDateFilter</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Optional inclusive lower bound for the order date filter.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#statusLabel" class="member-name-link">statusLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Displays loading, result-count, and error messages.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#taxColumn" class="member-name-link">taxColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column displaying each order's sales tax.</div>
+</div>
 <div class="col-first odd-row-color"><code>private static final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/format/DateTimeFormatter.html" title="class or interface in java.time.format" class="external-link">DateTimeFormatter</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#TIMESTAMP_FORMAT" class="member-name-link">TIMESTAMP_FORMAT</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Display format used for order timestamps in the table.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#timestampColumn" class="member-name-link">timestampColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column displaying each order's timestamp.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#totalColumn" class="member-name-link">totalColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column displaying each order's total cost.</div>
+</div>
 <div class="col-first even-row-color"><code>private int</code></div>
 <div class="col-second even-row-color"><code><a href="#totalOrders" class="member-name-link">totalOrders</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Number of orders matching the filters currently applied.</div>
+</div>
 </div>
 </section>
 </li>
@@ -269,37 +329,59 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changePageSize()" class="member-name-link">changePageSize</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies the selected page size and returns to the first page.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearFilters()" class="member-name-link">clearFilters</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Clears every filter and reloads the unfiltered order history.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize()" class="member-name-link">initialize</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures table columns and pagination, then loads the first page.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadPage(int)" class="member-name-link">loadPage</a><wbr>(int&nbsp;requestedPage)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Starts an asynchronous load of the requested page.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private <a href="../../model/OrderFilters.html" title="class in app.model">OrderFilters</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#readFilters()" class="member-name-link">readFilters</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reads and validates the filter controls.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshOrders()" class="member-name-link">refreshOrders</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reloads the first page using the filters currently shown.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoading(boolean)" class="member-name-link">setLoading</a><wbr>(boolean&nbsp;loading)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shows or hides the loading indicator and disables filter controls as needed.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showNextPage()" class="member-name-link">showNextPage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads the next page when additional matching orders exist.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showPreviousPage()" class="member-name-link">showPreviousPage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads the previous page when navigation is available.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updatePageButtons()" class="member-name-link">updatePageButtons</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Enables or disables page-navigation buttons based on the current page.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updatePaginationControls(int)" class="member-name-link">updatePaginationControls</a><wbr>(int&nbsp;pageSize)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the result summary and navigation buttons after a successful load.</div>
+</div>
 </div>
 </div>
 </div>
@@ -322,6 +404,7 @@ loadScripts(document, 'script');</script>
 <h3>orderDAO</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../../dao/OrderDAO.html" title="class in app.dao">OrderDAO</a></span>&nbsp;<span class="element-name">orderDAO</span></div>
+<div class="block">Data-access object used to count and retrieve matching orders.</div>
 </div>
 </section>
 </li>
@@ -330,6 +413,7 @@ loadScripts(document, 'script');</script>
 <h3>TIMESTAMP_FORMAT</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/format/DateTimeFormatter.html" title="class or interface in java.time.format" class="external-link">DateTimeFormatter</a></span>&nbsp;<span class="element-name">TIMESTAMP_FORMAT</span></div>
+<div class="block">Display format used for order timestamps in the table.</div>
 </div>
 </section>
 </li>
@@ -338,6 +422,7 @@ loadScripts(document, 'script');</script>
 <h3>DEFAULT_PAGE_SIZE</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DEFAULT_PAGE_SIZE</span></div>
+<div class="block">Number of orders shown per page when the view is first opened.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -354,6 +439,7 @@ loadScripts(document, 'script');</script>
 <h3>orderTable</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableView&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>&gt;</span>&nbsp;<span class="element-name">orderTable</span></div>
+<div class="block">Table containing the current page of orders.</div>
 </div>
 </section>
 </li>
@@ -362,6 +448,7 @@ loadScripts(document, 'script');</script>
 <h3>orderIdColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">orderIdColumn</span></div>
+<div class="block">Column displaying each order's identifier.</div>
 </div>
 </section>
 </li>
@@ -370,6 +457,7 @@ loadScripts(document, 'script');</script>
 <h3>employeeIdColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">employeeIdColumn</span></div>
+<div class="block">Column displaying the employee who handled each order.</div>
 </div>
 </section>
 </li>
@@ -378,6 +466,7 @@ loadScripts(document, 'script');</script>
 <h3>customerColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">customerColumn</span></div>
+<div class="block">Column displaying each order's customer name.</div>
 </div>
 </section>
 </li>
@@ -386,6 +475,7 @@ loadScripts(document, 'script');</script>
 <h3>timestampColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a>&gt;</span>&nbsp;<span class="element-name">timestampColumn</span></div>
+<div class="block">Column displaying each order's timestamp.</div>
 </div>
 </section>
 </li>
@@ -394,6 +484,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">paymentColumn</span></div>
+<div class="block">Column displaying each order's payment type.</div>
 </div>
 </section>
 </li>
@@ -402,6 +493,7 @@ loadScripts(document, 'script');</script>
 <h3>totalColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">totalColumn</span></div>
+<div class="block">Column displaying each order's total cost.</div>
 </div>
 </section>
 </li>
@@ -410,6 +502,7 @@ loadScripts(document, 'script');</script>
 <h3>taxColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Order.html" title="class in app.model">Order</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">taxColumn</span></div>
+<div class="block">Column displaying each order's sales tax.</div>
 </div>
 </section>
 </li>
@@ -418,6 +511,7 @@ loadScripts(document, 'script');</script>
 <h3>statusLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">statusLabel</span></div>
+<div class="block">Displays loading, result-count, and error messages.</div>
 </div>
 </section>
 </li>
@@ -426,6 +520,7 @@ loadScripts(document, 'script');</script>
 <h3>refreshButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">refreshButton</span></div>
+<div class="block">Button that reloads the first page using the current filters.</div>
 </div>
 </section>
 </li>
@@ -434,6 +529,7 @@ loadScripts(document, 'script');</script>
 <h3>applyFiltersButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">applyFiltersButton</span></div>
+<div class="block">Button that applies the current filter values.</div>
 </div>
 </section>
 </li>
@@ -442,6 +538,7 @@ loadScripts(document, 'script');</script>
 <h3>clearFiltersButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">clearFiltersButton</span></div>
+<div class="block">Button that clears all filters and reloads the first page.</div>
 </div>
 </section>
 </li>
@@ -450,6 +547,7 @@ loadScripts(document, 'script');</script>
 <h3>loadingIndicator</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.ProgressIndicator</span>&nbsp;<span class="element-name">loadingIndicator</span></div>
+<div class="block">Indicator shown while orders are being loaded.</div>
 </div>
 </section>
 </li>
@@ -458,6 +556,7 @@ loadScripts(document, 'script');</script>
 <h3>customerFilter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TextField</span>&nbsp;<span class="element-name">customerFilter</span></div>
+<div class="block">Text input used to filter orders by customer name.</div>
 </div>
 </section>
 </li>
@@ -466,6 +565,7 @@ loadScripts(document, 'script');</script>
 <h3>employeeFilter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TextField</span>&nbsp;<span class="element-name">employeeFilter</span></div>
+<div class="block">Text input used to filter orders by employee identifier.</div>
 </div>
 </section>
 </li>
@@ -474,6 +574,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentFilter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TextField</span>&nbsp;<span class="element-name">paymentFilter</span></div>
+<div class="block">Text input used to filter orders by payment type.</div>
 </div>
 </section>
 </li>
@@ -482,6 +583,7 @@ loadScripts(document, 'script');</script>
 <h3>startDateFilter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.DatePicker</span>&nbsp;<span class="element-name">startDateFilter</span></div>
+<div class="block">Optional inclusive lower bound for the order date filter.</div>
 </div>
 </section>
 </li>
@@ -490,6 +592,7 @@ loadScripts(document, 'script');</script>
 <h3>endDateFilter</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.DatePicker</span>&nbsp;<span class="element-name">endDateFilter</span></div>
+<div class="block">Optional inclusive upper bound for the order date filter.</div>
 </div>
 </section>
 </li>
@@ -498,6 +601,7 @@ loadScripts(document, 'script');</script>
 <h3>pageSizeSelector</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.ComboBox&lt;<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">pageSizeSelector</span></div>
+<div class="block">Selector for the number of orders displayed on each page.</div>
 </div>
 </section>
 </li>
@@ -506,6 +610,7 @@ loadScripts(document, 'script');</script>
 <h3>previousPageButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">previousPageButton</span></div>
+<div class="block">Button for navigating to the preceding page.</div>
 </div>
 </section>
 </li>
@@ -514,6 +619,7 @@ loadScripts(document, 'script');</script>
 <h3>nextPageButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">nextPageButton</span></div>
+<div class="block">Button for navigating to the following page.</div>
 </div>
 </section>
 </li>
@@ -522,6 +628,7 @@ loadScripts(document, 'script');</script>
 <h3>currentPage</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">currentPage</span></div>
+<div class="block">Zero-based index of the page currently displayed.</div>
 </div>
 </section>
 </li>
@@ -530,6 +637,7 @@ loadScripts(document, 'script');</script>
 <h3>totalOrders</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">totalOrders</span></div>
+<div class="block">Number of orders matching the filters currently applied.</div>
 </div>
 </section>
 </li>
@@ -538,6 +646,7 @@ loadScripts(document, 'script');</script>
 <h3>activeLoad</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.concurrent.Task&lt;<a href="OrderHistoryController.PageResult.html" title="class in app.controller.manager">OrderHistoryController.PageResult</a>&gt;</span>&nbsp;<span class="element-name">activeLoad</span></div>
+<div class="block">Background task currently loading an order-history page, if any.</div>
 </div>
 </section>
 </li>
@@ -570,6 +679,7 @@ loadScripts(document, 'script');</script>
 <h3>initialize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span>()</div>
+<div class="block">Configures table columns and pagination, then loads the first page.</div>
 </div>
 </section>
 </li>
@@ -578,6 +688,7 @@ loadScripts(document, 'script');</script>
 <h3>refreshOrders</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">refreshOrders</span>()</div>
+<div class="block">Reloads the first page using the filters currently shown.</div>
 </div>
 </section>
 </li>
@@ -586,6 +697,7 @@ loadScripts(document, 'script');</script>
 <h3>clearFilters</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearFilters</span>()</div>
+<div class="block">Clears every filter and reloads the unfiltered order history.</div>
 </div>
 </section>
 </li>
@@ -594,6 +706,7 @@ loadScripts(document, 'script');</script>
 <h3>changePageSize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">changePageSize</span>()</div>
+<div class="block">Applies the selected page size and returns to the first page.</div>
 </div>
 </section>
 </li>
@@ -602,6 +715,7 @@ loadScripts(document, 'script');</script>
 <h3>showPreviousPage</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showPreviousPage</span>()</div>
+<div class="block">Loads the previous page when navigation is available.</div>
 </div>
 </section>
 </li>
@@ -610,6 +724,7 @@ loadScripts(document, 'script');</script>
 <h3>showNextPage</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showNextPage</span>()</div>
+<div class="block">Loads the next page when additional matching orders exist.</div>
 </div>
 </section>
 </li>
@@ -618,6 +733,14 @@ loadScripts(document, 'script');</script>
 <h3>loadPage</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadPage</span><wbr><span class="parameters">(int&nbsp;requestedPage)</span></div>
+<div class="block">Starts an asynchronous load of the requested page.
+
+ <p>The requested index is clamped to the last available page after the
+ matching order count is known.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>requestedPage</code> - zero-based page index to load</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -626,6 +749,13 @@ loadScripts(document, 'script');</script>
 <h3>readFilters</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="../../model/OrderFilters.html" title="class in app.model">OrderFilters</a></span>&nbsp;<span class="element-name">readFilters</span>()</div>
+<div class="block">Reads and validates the filter controls.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>normalized filters represented by the current controls</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the employee ID or date range is invalid</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -634,6 +764,11 @@ loadScripts(document, 'script');</script>
 <h3>updatePaginationControls</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updatePaginationControls</span><wbr><span class="parameters">(int&nbsp;pageSize)</span></div>
+<div class="block">Updates the result summary and navigation buttons after a successful load.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pageSize</code> - number of orders displayed on each page</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -642,6 +777,7 @@ loadScripts(document, 'script');</script>
 <h3>updatePageButtons</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updatePageButtons</span>()</div>
+<div class="block">Enables or disables page-navigation buttons based on the current page.</div>
 </div>
 </section>
 </li>
@@ -650,6 +786,11 @@ loadScripts(document, 'script');</script>
 <h3>setLoading</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLoading</span><wbr><span class="parameters">(boolean&nbsp;loading)</span></div>
+<div class="block">Shows or hides the loading indicator and disables filter controls as needed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>loading</code> - <code>true</code> while a page is being fetched</dd>
+</dl>
 </div>
 </section>
 </li>

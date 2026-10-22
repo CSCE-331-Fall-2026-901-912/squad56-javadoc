@@ -97,6 +97,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">RecipeIngredient</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents an inventory item and the quantity of it used in a recipe.</div>
+<dl class="notes">
+<dt>Author:</dt>
+<dd>Olivia Tserng</dd>
+</dl>
 </div>
 </section>
 <section class="summary">
@@ -129,7 +134,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(app.model.InventoryItem,java.math.BigDecimal)" class="member-name-link">RecipeIngredient</a><wbr>(<a href="InventoryItem.html" title="class in app.model">InventoryItem</a>&nbsp;inventoryItem,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a recipe ingredient from an inventory item and its required quantity.</div>
+</div>
 </div>
 </section>
 </li>
@@ -146,13 +153,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InventoryItem.html" title="class in app.model">InventoryItem</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInventoryItem()" class="member-name-link">getInventoryItem</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the inventory item used by this recipe ingredient.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the quantity of the inventory item used.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnit()" class="member-name-link">getUnit</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the unit associated with the inventory item.</div>
+</div>
 </div>
 </div>
 </div>
@@ -200,6 +213,12 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">RecipeIngredient</span><wbr><span class="parameters">(<a href="InventoryItem.html" title="class in app.model">InventoryItem</a>&nbsp;inventoryItem,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;quantity)</span></div>
+<div class="block">Creates a recipe ingredient from an inventory item and its required quantity.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>inventoryItem</code> - inventory item used by the recipe</dd>
+<dd><code>quantity</code> - quantity of the inventory item used</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -216,6 +235,11 @@ loadScripts(document, 'script');</script>
 <h3>getInventoryItem</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InventoryItem.html" title="class in app.model">InventoryItem</a></span>&nbsp;<span class="element-name">getInventoryItem</span>()</div>
+<div class="block">Returns the inventory item used by this recipe ingredient.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>associated inventory item</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -224,6 +248,11 @@ loadScripts(document, 'script');</script>
 <h3>getQuantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block">Returns the quantity of the inventory item used.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>ingredient quantity</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -232,6 +261,11 @@ loadScripts(document, 'script');</script>
 <h3>getUnit</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUnit</span>()</div>
+<div class="block">Returns the unit associated with the inventory item.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>inventory item's unit</dd>
+</dl>
 </div>
 </section>
 </li>

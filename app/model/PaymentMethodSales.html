@@ -99,10 +99,17 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-paymentMethod">paymentMethod</span></code> - payment method represented by this summary</dd>
+<dd><code><span id="param-orderCount">orderCount</span></code> - number of orders paid with this method</dd>
+<dd><code><span id="param-salesRevenue">salesRevenue</span></code> - total sales revenue for those orders</dd>
+</dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PaymentMethodSales</span>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentMethod, long&nbsp;orderCount, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;salesRevenue)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Aggregated sales totals for a payment method.</div>
 </div>
 </section>
 <section class="summary">
@@ -119,17 +126,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final long</code></div>
 <div class="col-second even-row-color"><code><a href="#orderCount" class="member-name-link">orderCount</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>orderCount</code> record component.</div>
+<div class="block">The field for the <a href="#param-orderCount"><code>orderCount</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#paymentMethod" class="member-name-link">paymentMethod</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>paymentMethod</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#salesRevenue" class="member-name-link">salesRevenue</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>salesRevenue</code> record component.</div>
+<div class="block">The field for the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -175,17 +182,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orderCount()" class="member-name-link">orderCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>orderCount</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-orderCount"><code>orderCount</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paymentMethod()" class="member-name-link">paymentMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>paymentMethod</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#salesRevenue()" class="member-name-link">salesRevenue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>salesRevenue</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -214,7 +221,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentMethod</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">paymentMethod</span></div>
-<div class="block">The field for the <code>paymentMethod</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -223,7 +230,7 @@ loadScripts(document, 'script');</script>
 <h3>orderCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">orderCount</span></div>
-<div class="block">The field for the <code>orderCount</code> record component.</div>
+<div class="block">The field for the <a href="#param-orderCount"><code>orderCount</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -232,7 +239,7 @@ loadScripts(document, 'script');</script>
 <h3>salesRevenue</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">salesRevenue</span></div>
-<div class="block">The field for the <code>salesRevenue</code> record component.</div>
+<div class="block">The field for the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -254,9 +261,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>PaymentMethodSales</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>paymentMethod</code> - the value for the <code>paymentMethod</code> record component</dd>
-<dd><code>orderCount</code> - the value for the <code>orderCount</code> record component</dd>
-<dd><code>salesRevenue</code> - the value for the <code>salesRevenue</code> record component</dd>
+<dd><code>paymentMethod</code> - the value for the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component</dd>
+<dd><code>orderCount</code> - the value for the <a href="#param-orderCount"><code>orderCount</code></a> record component</dd>
+<dd><code>salesRevenue</code> - the value for the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -321,10 +328,10 @@ loadScripts(document, 'script');</script>
 <h3>paymentMethod</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">paymentMethod</span>()</div>
-<div class="block">Returns the value of the <code>paymentMethod</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>paymentMethod</code> record component</dd>
+<dd>the value of the <a href="#param-paymentMethod"><code>paymentMethod</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -334,10 +341,10 @@ loadScripts(document, 'script');</script>
 <h3>orderCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">orderCount</span>()</div>
-<div class="block">Returns the value of the <code>orderCount</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-orderCount"><code>orderCount</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>orderCount</code> record component</dd>
+<dd>the value of the <a href="#param-orderCount"><code>orderCount</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -347,10 +354,10 @@ loadScripts(document, 'script');</script>
 <h3>salesRevenue</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">salesRevenue</span>()</div>
-<div class="block">Returns the value of the <code>salesRevenue</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>salesRevenue</code> record component</dd>
+<dd>the value of the <a href="#param-salesRevenue"><code>salesRevenue</code></a> record component</dd>
 </dl>
 </div>
 </section>

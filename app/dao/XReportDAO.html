@@ -88,6 +88,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">XReportDAO</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Reads hourly sales aggregates used to build the manager's X-report.</div>
 </div>
 </section>
 <section class="summary">
@@ -118,7 +119,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHourlySales(java.time.LocalDate)" class="member-name-link">getHourlySales</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;date)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves hourly order, revenue, tax, and payment totals for a calendar day.</div>
+</div>
 </div>
 </div>
 </div>
@@ -158,9 +161,22 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;</span>&nbsp;<span class="element-name">getHourlySales</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;date)</span>
                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></span></div>
+<div class="block">Retrieves hourly order, revenue, tax, and payment totals for a calendar day.
+
+ <p>The query includes timestamps from the start of <code>date</code> through,
+ but not including, the start of the following day. Sales exclude tax;
+ total and payment-method amounts include tax. Hours without orders are
+ omitted, and returned rows are ordered by hour.</p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>date</code> - calendar date to report</dd>
+<dt>Returns:</dt>
+<dd>hourly aggregates in ascending hour order; empty if no orders match</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/SQLException.html" title="class or interface in java.sql" class="external-link">SQLException</a></code> - if database access or query execution fails</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>date</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/DateTimeException.html" title="class or interface in java.time" class="external-link">DateTimeException</a></code> - if <code>date</code> is the maximum
+         representable date and the following day cannot be calculated</dd>
 </dl>
 </div>
 </section>

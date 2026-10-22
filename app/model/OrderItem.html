@@ -104,6 +104,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OrderItem</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Immutable details for one menu-item line within a customer order.</div>
 </div>
 </section>
 <section class="summary">
@@ -119,22 +120,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#iceLevel" class="member-name-link">iceLevel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Ice level selected for the ordered item.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#itemId" class="member-name-link">itemId</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Identifier of the selected menu item.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#mods" class="member-name-link">mods</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Modifications selected for this line; stored as an immutable copy.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#quantity" class="member-name-link">quantity</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Number of units of the menu item ordered.</div>
+</div>
 <div class="col-first even-row-color"><code>private final int</code></div>
 <div class="col-second even-row-color"><code><a href="#sugarLevel" class="member-name-link">sugarLevel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Sugar level selected for the ordered item.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#unitPrice" class="member-name-link">unitPrice</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Base menu price per unit at sale time, excluding modifications.</div>
+</div>
 </div>
 </section>
 </li>
@@ -152,7 +165,9 @@ loadScripts(document, 'script');</script>
  int&nbsp;sugarLevel,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;iceLevel,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;&nbsp;mods)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates an order line and copies its modification list.</div>
+</div>
 </div>
 </section>
 </li>
@@ -169,22 +184,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIceLevel()" class="member-name-link">getIceLevel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the selected ice level.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItemId()" class="member-name-link">getItemId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the identifier of the menu item in this order line.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMods()" class="member-name-link">getMods</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the modifications selected for this order line.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantity()" class="member-name-link">getQuantity</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the number of units ordered.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSugarLevel()" class="member-name-link">getSugarLevel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the selected sugar level.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUnitPrice()" class="member-name-link">getUnitPrice</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the base menu price per unit at sale time.</div>
+</div>
 </div>
 </div>
 </div>
@@ -207,6 +234,7 @@ loadScripts(document, 'script');</script>
 <h3>itemId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">itemId</span></div>
+<div class="block">Identifier of the selected menu item.</div>
 </div>
 </section>
 </li>
@@ -215,6 +243,7 @@ loadScripts(document, 'script');</script>
 <h3>quantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">quantity</span></div>
+<div class="block">Number of units of the menu item ordered.</div>
 </div>
 </section>
 </li>
@@ -223,6 +252,7 @@ loadScripts(document, 'script');</script>
 <h3>unitPrice</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">unitPrice</span></div>
+<div class="block">Base menu price per unit at sale time, excluding modifications.</div>
 </div>
 </section>
 </li>
@@ -231,6 +261,7 @@ loadScripts(document, 'script');</script>
 <h3>sugarLevel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">sugarLevel</span></div>
+<div class="block">Sugar level selected for the ordered item.</div>
 </div>
 </section>
 </li>
@@ -239,6 +270,7 @@ loadScripts(document, 'script');</script>
 <h3>iceLevel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">iceLevel</span></div>
+<div class="block">Ice level selected for the ordered item.</div>
 </div>
 </section>
 </li>
@@ -247,6 +279,7 @@ loadScripts(document, 'script');</script>
 <h3>mods</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;</span>&nbsp;<span class="element-name">mods</span></div>
+<div class="block">Modifications selected for this line; stored as an immutable copy.</div>
 </div>
 </section>
 </li>
@@ -268,6 +301,18 @@ loadScripts(document, 'script');</script>
  int&nbsp;sugarLevel,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;iceLevel,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;&nbsp;mods)</span></div>
+<div class="block">Creates an order line and copies its modification list.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>itemId</code> - identifier of the menu item</dd>
+<dd><code>quantity</code> - number of units ordered</dd>
+<dd><code>unitPrice</code> - base menu price per unit at sale time, excluding modifications</dd>
+<dd><code>sugarLevel</code> - selected sugar level</dd>
+<dd><code>iceLevel</code> - selected ice level</dd>
+<dd><code>mods</code> - modifications selected for the item</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>mods</code> is <code>null</code> or contains a null element</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -284,6 +329,11 @@ loadScripts(document, 'script');</script>
 <h3>getItemId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getItemId</span>()</div>
+<div class="block">Returns the identifier of the menu item in this order line.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the menu-item identifier</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -292,6 +342,11 @@ loadScripts(document, 'script');</script>
 <h3>getQuantity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getQuantity</span>()</div>
+<div class="block">Returns the number of units ordered.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the ordered quantity</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -300,6 +355,11 @@ loadScripts(document, 'script');</script>
 <h3>getUnitPrice</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getUnitPrice</span>()</div>
+<div class="block">Returns the base menu price per unit at sale time.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the unit price, excluding modification prices</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -308,6 +368,11 @@ loadScripts(document, 'script');</script>
 <h3>getSugarLevel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSugarLevel</span>()</div>
+<div class="block">Returns the selected sugar level.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the sugar-level value</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -316,6 +381,11 @@ loadScripts(document, 'script');</script>
 <h3>getIceLevel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getIceLevel</span>()</div>
+<div class="block">Returns the selected ice level.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the ice-level value, or <code>null</code> if none was set</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -324,6 +394,11 @@ loadScripts(document, 'script');</script>
 <h3>getMods</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Mod.html" title="class in app.model">Mod</a>&gt;</span>&nbsp;<span class="element-name">getMods</span>()</div>
+<div class="block">Returns the modifications selected for this order line.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an immutable list of modifications, possibly empty</dd>
+</dl>
 </div>
 </section>
 </li>

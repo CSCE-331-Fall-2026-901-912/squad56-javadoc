@@ -106,6 +106,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Order</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Immutable summary of a completed customer order.</div>
 </div>
 </section>
 <section class="summary">
@@ -121,25 +122,39 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#customerName" class="member-name-link">customerName</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Customer name recorded for this order, if provided.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#employeeId" class="member-name-link">employeeId</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Identifier of the employee who recorded this order.</div>
+</div>
 <div class="col-first even-row-color"><code>private final int</code></div>
 <div class="col-second even-row-color"><code><a href="#orderId" class="member-name-link">orderId</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Database identifier of this order.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#orderTimestamp" class="member-name-link">orderTimestamp</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Local date and time when this order was recorded.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#paymentType" class="member-name-link">paymentType</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Payment method recorded for this order.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#salesTax" class="member-name-link">salesTax</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Sales tax included in <code>totalCost</code>.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#totalCost" class="member-name-link">totalCost</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Amount collected for this order, including sales tax.</div>
+</div>
 </div>
 </section>
 </li>
@@ -158,7 +173,9 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentType,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;totalCost,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;salesTax)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates an order summary from its recorded values.</div>
+</div>
 </div>
 </section>
 </li>
@@ -175,25 +192,39 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomerName()" class="member-name-link">getCustomerName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the customer name recorded for this order.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmployeeId()" class="member-name-link">getEmployeeId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the identifier of the employee who recorded this order.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderId()" class="member-name-link">getOrderId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns this order's database identifier.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderTimestamp()" class="member-name-link">getOrderTimestamp</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns when this order was recorded.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPaymentType()" class="member-name-link">getPaymentType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the payment method recorded for this order.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSalesTax()" class="member-name-link">getSalesTax</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the sales tax included in this order's total.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalCost()" class="member-name-link">getTotalCost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the amount collected for this order.</div>
+</div>
 </div>
 </div>
 </div>
@@ -216,6 +247,7 @@ loadScripts(document, 'script');</script>
 <h3>orderId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">orderId</span></div>
+<div class="block">Database identifier of this order.</div>
 </div>
 </section>
 </li>
@@ -224,6 +256,7 @@ loadScripts(document, 'script');</script>
 <h3>employeeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">employeeId</span></div>
+<div class="block">Identifier of the employee who recorded this order.</div>
 </div>
 </section>
 </li>
@@ -232,6 +265,7 @@ loadScripts(document, 'script');</script>
 <h3>customerName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">customerName</span></div>
+<div class="block">Customer name recorded for this order, if provided.</div>
 </div>
 </section>
 </li>
@@ -240,6 +274,7 @@ loadScripts(document, 'script');</script>
 <h3>orderTimestamp</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></span>&nbsp;<span class="element-name">orderTimestamp</span></div>
+<div class="block">Local date and time when this order was recorded.</div>
 </div>
 </section>
 </li>
@@ -248,6 +283,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentType</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">paymentType</span></div>
+<div class="block">Payment method recorded for this order.</div>
 </div>
 </section>
 </li>
@@ -256,6 +292,7 @@ loadScripts(document, 'script');</script>
 <h3>totalCost</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">totalCost</span></div>
+<div class="block">Amount collected for this order, including sales tax.</div>
 </div>
 </section>
 </li>
@@ -264,6 +301,7 @@ loadScripts(document, 'script');</script>
 <h3>salesTax</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">salesTax</span></div>
+<div class="block">Sales tax included in <code>totalCost</code>.</div>
 </div>
 </section>
 </li>
@@ -286,6 +324,17 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentType,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;totalCost,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;salesTax)</span></div>
+<div class="block">Creates an order summary from its recorded values.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>orderId</code> - database identifier of the order</dd>
+<dd><code>employeeId</code> - identifier of the employee who recorded the order</dd>
+<dd><code>customerName</code> - customer name recorded for the order</dd>
+<dd><code>orderTimestamp</code> - date and time when the order was recorded</dd>
+<dd><code>paymentType</code> - payment method recorded for the order</dd>
+<dd><code>totalCost</code> - amount collected, including sales tax</dd>
+<dd><code>salesTax</code> - tax included in <code>totalCost</code></dd>
+</dl>
 </div>
 </section>
 </li>
@@ -302,6 +351,11 @@ loadScripts(document, 'script');</script>
 <h3>getOrderId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOrderId</span>()</div>
+<div class="block">Returns this order's database identifier.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the order identifier</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -310,6 +364,11 @@ loadScripts(document, 'script');</script>
 <h3>getEmployeeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getEmployeeId</span>()</div>
+<div class="block">Returns the identifier of the employee who recorded this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the employee identifier</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -318,6 +377,11 @@ loadScripts(document, 'script');</script>
 <h3>getCustomerName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerName</span>()</div>
+<div class="block">Returns the customer name recorded for this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the recorded customer name, or <code>null</code> if none was recorded</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -326,6 +390,11 @@ loadScripts(document, 'script');</script>
 <h3>getOrderTimestamp</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link">LocalDateTime</a></span>&nbsp;<span class="element-name">getOrderTimestamp</span>()</div>
+<div class="block">Returns when this order was recorded.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the order's local timestamp</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -334,6 +403,11 @@ loadScripts(document, 'script');</script>
 <h3>getPaymentType</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPaymentType</span>()</div>
+<div class="block">Returns the payment method recorded for this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the payment type, or <code>null</code> if none was recorded</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -342,6 +416,11 @@ loadScripts(document, 'script');</script>
 <h3>getTotalCost</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getTotalCost</span>()</div>
+<div class="block">Returns the amount collected for this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the total amount, including sales tax</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -350,6 +429,11 @@ loadScripts(document, 'script');</script>
 <h3>getSalesTax</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getSalesTax</span>()</div>
+<div class="block">Returns the sales tax included in this order's total.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the sales tax amount</dd>
+</dl>
 </div>
 </section>
 </li>

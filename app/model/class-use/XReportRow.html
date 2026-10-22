@@ -78,22 +78,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#hourColumn" class="member-name-link">hourColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing each report row's hour interval.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableView<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#hourlySalesTable" class="member-name-link">hourlySalesTable</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Table containing hourly sales rows for the selected date.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#orderCountColumn" class="member-name-link">orderCountColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing the number of orders in each hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#salesColumn" class="member-name-link">salesColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column showing sales before tax for each hour.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#taxColumn" class="member-name-link">taxColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing sales tax for each hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#totalColumn" class="member-name-link">totalColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column showing the total collected, including tax, for each hour.</div>
+</div>
 </div>
 <div class="caption"><span>Method parameters in <a href="../../controller/manager/package-summary.html">app.controller.manager</a> with type arguments of type <a href="../XReportRow.html" title="class in app.model">XReportRow</a></span></div>
 <div class="summary-table three-column-summary">
@@ -102,10 +114,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private void</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#formatCurrencyColumn(javafx.scene.control.TableColumn)" class="member-name-link">formatCurrencyColumn</a><wbr>(javafx.scene.control.TableColumn&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;&nbsp;column)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Configures a report currency column to display values using US currency
+ formatting while retaining its underlying numeric value.</div>
+</div>
 <div class="col-first odd-row-color"><code>private void</code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">XReportController.</span><code><a href="../../controller/manager/XReportController.html#updateSummary(java.util.List)" class="member-name-link">updateSummary</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>&gt;&nbsp;rows)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Sums hourly rows and writes the date-wide order, sales, tax, total, and
+ payment-method summaries to the interface.</div>
+</div>
 </div>
 </section>
 </li>
@@ -119,7 +137,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../XReportRow.html" title="class in app.model">XReportRow</a>&gt;</code></div>
 <div class="col-second even-row-color"><span class="type-name-label">XReportDAO.</span><code><a href="../../dao/XReportDAO.html#getHourlySales(java.time.LocalDate)" class="member-name-link">getHourlySales</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;date)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Retrieves hourly order, revenue, tax, and payment totals for a calendar day.</div>
+</div>
 </div>
 </section>
 </li>

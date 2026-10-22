@@ -103,6 +103,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">EmployeesController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Configures and manages the employee table and employee add/edit forms.</div>
+<dl class="notes">
+<dt>Author:</dt>
+<dd>Olivia Tserng</dd>
+</dl>
 </div>
 </section>
 <section class="summary">
@@ -166,16 +171,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize()" class="member-name-link">initialize</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures the employee table, loads its data, and opens selected employees for editing.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadEmployees()" class="member-name-link">loadEmployees</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves all employees and displays them in the table.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showAddEmployee()" class="member-name-link">showAddEmployee</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens the form for adding an employee and refreshes the table when it closes.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showEditEmployee(app.model.Employee)" class="member-name-link">showEditEmployee</a><wbr>(<a href="../../model/Employee.html" title="class in app.model">Employee</a>&nbsp;employee)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens the form for editing the selected employee and refreshes the table when it closes.</div>
+</div>
 </div>
 </div>
 </div>
@@ -278,6 +291,7 @@ loadScripts(document, 'script');</script>
 <h3>initialize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span>()</div>
+<div class="block">Configures the employee table, loads its data, and opens selected employees for editing.</div>
 </div>
 </section>
 </li>
@@ -286,6 +300,7 @@ loadScripts(document, 'script');</script>
 <h3>loadEmployees</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadEmployees</span>()</div>
+<div class="block">Retrieves all employees and displays them in the table.</div>
 </div>
 </section>
 </li>
@@ -295,9 +310,10 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showAddEmployee</span>()
                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Opens the form for adding an employee and refreshes the table when it closes.</div>
 <dl class="notes">
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if the employee form cannot be loaded</dd>
 </dl>
 </div>
 </section>
@@ -307,6 +323,11 @@ loadScripts(document, 'script');</script>
 <h3>showEditEmployee</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showEditEmployee</span><wbr><span class="parameters">(<a href="../../model/Employee.html" title="class in app.model">Employee</a>&nbsp;employee)</span></div>
+<div class="block">Opens the form for editing the selected employee and refreshes the table when it closes.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>employee</code> - employee to edit</dd>
+</dl>
 </div>
 </section>
 </li>

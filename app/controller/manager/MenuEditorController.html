@@ -104,6 +104,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MenuEditorController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Coordinates the manager interface for viewing and editing menu drinks.</div>
 </div>
 </section>
 <section class="summary">
@@ -119,22 +120,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#categoryColumn" class="member-name-link">categoryColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Table column displaying each item's category.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="../../dao/ItemDAO.html" title="class in app.dao">ItemDAO</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#itemDAO" class="member-name-link">itemDAO</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Data-access object used for menu item persistence.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#itemNameColumn" class="member-name-link">itemNameColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Table column displaying each item's name.</div>
+</div>
 <div class="col-first odd-row-color"><code>private boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#loading" class="member-name-link">loading</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Whether a load or database write is currently in progress.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableView<wbr>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#menuTable" class="member-name-link">menuTable</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Table displaying the menu items currently loaded from the database.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#priceColumn" class="member-name-link">priceColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Table column displaying each item's price.</div>
+</div>
 </div>
 </section>
 </li>
@@ -164,24 +177,39 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addDrink()" class="member-name-link">addDrink</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens and validates the drink form, then asynchronously inserts the
+ selected item and its recipe.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#editSelected()" class="member-name-link">editSelected</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens the selected drink in the edit form and asynchronously saves
+ validated changes.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize()" class="member-name-link">initialize</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures table value and display factories, then starts loading items.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refreshMenu()" class="member-name-link">refreshMenu</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads the menu items on a daemon worker thread and updates the table.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSelected()" class="member-name-link">removeSelected</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Confirms removal of the selected drink, then asynchronously deletes it
+ and its recipe.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showMessage(javafx.scene.control.Alert.AlertType,java.lang.String,java.lang.String)" class="member-name-link">showMessage</a><wbr>(javafx.scene.control.Alert.AlertType&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Displays a modal alert with the supplied type, title, and message.</div>
+</div>
 </div>
 </div>
 </div>
@@ -204,6 +232,7 @@ loadScripts(document, 'script');</script>
 <h3>menuTable</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableView&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>&gt;</span>&nbsp;<span class="element-name">menuTable</span></div>
+<div class="block">Table displaying the menu items currently loaded from the database.</div>
 </div>
 </section>
 </li>
@@ -212,6 +241,7 @@ loadScripts(document, 'script');</script>
 <h3>itemNameColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">itemNameColumn</span></div>
+<div class="block">Table column displaying each item's name.</div>
 </div>
 </section>
 </li>
@@ -220,6 +250,7 @@ loadScripts(document, 'script');</script>
 <h3>priceColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">priceColumn</span></div>
+<div class="block">Table column displaying each item's price.</div>
 </div>
 </section>
 </li>
@@ -228,6 +259,7 @@ loadScripts(document, 'script');</script>
 <h3>categoryColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">categoryColumn</span></div>
+<div class="block">Table column displaying each item's category.</div>
 </div>
 </section>
 </li>
@@ -236,6 +268,7 @@ loadScripts(document, 'script');</script>
 <h3>itemDAO</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../../dao/ItemDAO.html" title="class in app.dao">ItemDAO</a></span>&nbsp;<span class="element-name">itemDAO</span></div>
+<div class="block">Data-access object used for menu item persistence.</div>
 </div>
 </section>
 </li>
@@ -244,6 +277,7 @@ loadScripts(document, 'script');</script>
 <h3>loading</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">loading</span></div>
+<div class="block">Whether a load or database write is currently in progress.</div>
 </div>
 </section>
 </li>
@@ -276,6 +310,7 @@ loadScripts(document, 'script');</script>
 <h3>initialize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span>()</div>
+<div class="block">Configures table value and display factories, then starts loading items.</div>
 </div>
 </section>
 </li>
@@ -284,6 +319,10 @@ loadScripts(document, 'script');</script>
 <h3>refreshMenu</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">refreshMenu</span>()</div>
+<div class="block">Loads the menu items on a daemon worker thread and updates the table.
+
+ <p>Duplicate refreshes are ignored while another load or write is in
+ progress. A load failure is shown in an error alert.</p></div>
 </div>
 </section>
 </li>
@@ -292,6 +331,11 @@ loadScripts(document, 'script');</script>
 <h3>addDrink</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addDrink</span>()</div>
+<div class="block">Opens and validates the drink form, then asynchronously inserts the
+ selected item and its recipe.
+
+ <p>Form/database failures are reported in an alert; database write
+ failures occur in the background task and are also shown to the user.</p></div>
 </div>
 </section>
 </li>
@@ -302,6 +346,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">showMessage</span><wbr><span class="parameters">(javafx.scene.control.Alert.AlertType&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="block">Displays a modal alert with the supplied type, title, and message.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>type</code> - alert type controlling its icon and buttons</dd>
+<dd><code>title</code> - title shown in the alert window</dd>
+<dd><code>message</code> - content shown in the alert</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -310,6 +361,11 @@ loadScripts(document, 'script');</script>
 <h3>editSelected</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">editSelected</span>()</div>
+<div class="block">Opens the selected drink in the edit form and asynchronously saves
+ validated changes.
+
+ <p>If no row is selected, a warning is shown. Form-loading and database
+ write errors are presented to the user.</p></div>
 </div>
 </section>
 </li>
@@ -318,6 +374,11 @@ loadScripts(document, 'script');</script>
 <h3>removeSelected</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeSelected</span>()</div>
+<div class="block">Confirms removal of the selected drink, then asynchronously deletes it
+ and its recipe.
+
+ <p>If no row is selected, a warning is shown. Cancellation leaves the
+ database unchanged, and deletion errors are presented in an alert.</p></div>
 </div>
 </section>
 </li>

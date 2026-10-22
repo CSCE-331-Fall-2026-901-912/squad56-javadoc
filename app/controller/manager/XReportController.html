@@ -119,6 +119,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">XReportController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Configures and refreshes the manager's date-selectable hourly X-report.</div>
 </div>
 </section>
 <section class="summary">
@@ -134,64 +135,104 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second even-row-color"><code><a href="#cashTotalLabel" class="member-name-link">cashTotalLabel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label summarizing collections paid in cash.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#creditTotalLabel" class="member-name-link">creditTotalLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label summarizing collections paid by credit.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second even-row-color"><code><a href="#debitTotalLabel" class="member-name-link">debitTotalLabel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label summarizing collections paid by debit.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#hourColumn" class="member-name-link">hourColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column showing each report row's hour interval.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableView<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#hourlySalesTable" class="member-name-link">hourlySalesTable</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Table containing hourly sales rows for the selected date.</div>
+</div>
 <div class="col-first odd-row-color"><code>private boolean</code></div>
 <div class="col-second odd-row-color"><code><a href="#loading" class="member-name-link">loading</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Whether a report query is currently being loaded.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#orderCountColumn" class="member-name-link">orderCountColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing the number of orders in each hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#otherTotalLabel" class="member-name-link">otherTotalLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label summarizing payment totals not classified as cash, debit, or credit.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Button</code></div>
 <div class="col-second even-row-color"><code><a href="#refreshButton" class="member-name-link">refreshButton</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Button used to request a report refresh.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="../../dao/XReportDAO.html" title="class in app.dao">XReportDAO</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#reportDAO" class="member-name-link">reportDAO</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Data-access object that retrieves hourly report rows.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second even-row-color"><code><a href="#reportDateLabel" class="member-name-link">reportDateLabel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label showing the date currently represented by the report.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.DatePicker</code></div>
 <div class="col-second odd-row-color"><code><a href="#reportDatePicker" class="member-name-link">reportDatePicker</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Date selected for the report.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second even-row-color"><code><a href="#reportStatusLabel" class="member-name-link">reportStatusLabel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label showing the latest load status or validation feedback.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second odd-row-color"><code><a href="#salesColumn" class="member-name-link">salesColumn</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Column showing sales before tax for each hour.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#taxColumn" class="member-name-link">taxColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing sales tax for each hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#totalCollectedLabel" class="member-name-link">totalCollectedLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label summarizing total collections, including tax.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.TableColumn<wbr>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#totalColumn" class="member-name-link">totalColumn</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Column showing the total collected, including tax, for each hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#totalOrdersLabel" class="member-name-link">totalOrdersLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label summarizing the total order count for the selected date.</div>
+</div>
 <div class="col-first even-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second even-row-color"><code><a href="#totalSalesLabel" class="member-name-link">totalSalesLabel</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Label summarizing sales before tax for the selected date.</div>
+</div>
 <div class="col-first odd-row-color"><code>private javafx.scene.control.Label</code></div>
 <div class="col-second odd-row-color"><code><a href="#totalTaxLabel" class="member-name-link">totalTaxLabel</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Label summarizing sales tax for the selected date.</div>
+</div>
 </div>
 </section>
 </li>
@@ -221,25 +262,44 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSummary()" class="member-name-link">clearSummary</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resets all summary labels to indicate that totals are unavailable.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#configureColumns()" class="member-name-link">configureColumns</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Connects report values to their table columns and configures hour and
+ currency display formatting.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#formatCurrencyColumn(javafx.scene.control.TableColumn)" class="member-name-link">formatCurrencyColumn</a><wbr>(javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;&nbsp;column)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures a report currency column to display values using US currency
+ formatting while retaining its underlying numeric value.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleRefresh()" class="member-name-link">handleRefresh</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Handles the refresh button by loading the date currently selected.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize()" class="member-name-link">initialize</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the initial report date to the current Chicago date, configures the
+ table, and starts the initial load.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#loadReport()" class="member-name-link">loadReport</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Loads the selected date's report asynchronously, updates the table and
+ summaries, and displays an error alert if loading fails.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateSummary(java.util.List)" class="member-name-link">updateSummary</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;&nbsp;rows)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sums hourly rows and writes the date-wide order, sales, tax, total, and
+ payment-method summaries to the interface.</div>
+</div>
 </div>
 </div>
 </div>
@@ -262,6 +322,7 @@ loadScripts(document, 'script');</script>
 <h3>reportDateLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">reportDateLabel</span></div>
+<div class="block">Label showing the date currently represented by the report.</div>
 </div>
 </section>
 </li>
@@ -270,6 +331,7 @@ loadScripts(document, 'script');</script>
 <h3>hourlySalesTable</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableView&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;</span>&nbsp;<span class="element-name">hourlySalesTable</span></div>
+<div class="block">Table containing hourly sales rows for the selected date.</div>
 </div>
 </section>
 </li>
@@ -278,6 +340,7 @@ loadScripts(document, 'script');</script>
 <h3>hourColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">hourColumn</span></div>
+<div class="block">Column showing each report row's hour interval.</div>
 </div>
 </section>
 </li>
@@ -286,6 +349,7 @@ loadScripts(document, 'script');</script>
 <h3>orderCountColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&gt;</span>&nbsp;<span class="element-name">orderCountColumn</span></div>
+<div class="block">Column showing the number of orders in each hour.</div>
 </div>
 </section>
 </li>
@@ -294,6 +358,7 @@ loadScripts(document, 'script');</script>
 <h3>salesColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">salesColumn</span></div>
+<div class="block">Column showing sales before tax for each hour.</div>
 </div>
 </section>
 </li>
@@ -302,6 +367,7 @@ loadScripts(document, 'script');</script>
 <h3>taxColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">taxColumn</span></div>
+<div class="block">Column showing sales tax for each hour.</div>
 </div>
 </section>
 </li>
@@ -310,6 +376,7 @@ loadScripts(document, 'script');</script>
 <h3>totalColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;</span>&nbsp;<span class="element-name">totalColumn</span></div>
+<div class="block">Column showing the total collected, including tax, for each hour.</div>
 </div>
 </section>
 </li>
@@ -318,6 +385,7 @@ loadScripts(document, 'script');</script>
 <h3>totalOrdersLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">totalOrdersLabel</span></div>
+<div class="block">Label summarizing the total order count for the selected date.</div>
 </div>
 </section>
 </li>
@@ -326,6 +394,7 @@ loadScripts(document, 'script');</script>
 <h3>totalSalesLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">totalSalesLabel</span></div>
+<div class="block">Label summarizing sales before tax for the selected date.</div>
 </div>
 </section>
 </li>
@@ -334,6 +403,7 @@ loadScripts(document, 'script');</script>
 <h3>totalTaxLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">totalTaxLabel</span></div>
+<div class="block">Label summarizing sales tax for the selected date.</div>
 </div>
 </section>
 </li>
@@ -342,6 +412,7 @@ loadScripts(document, 'script');</script>
 <h3>totalCollectedLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">totalCollectedLabel</span></div>
+<div class="block">Label summarizing total collections, including tax.</div>
 </div>
 </section>
 </li>
@@ -350,6 +421,7 @@ loadScripts(document, 'script');</script>
 <h3>cashTotalLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">cashTotalLabel</span></div>
+<div class="block">Label summarizing collections paid in cash.</div>
 </div>
 </section>
 </li>
@@ -358,6 +430,7 @@ loadScripts(document, 'script');</script>
 <h3>debitTotalLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">debitTotalLabel</span></div>
+<div class="block">Label summarizing collections paid by debit.</div>
 </div>
 </section>
 </li>
@@ -366,6 +439,7 @@ loadScripts(document, 'script');</script>
 <h3>creditTotalLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">creditTotalLabel</span></div>
+<div class="block">Label summarizing collections paid by credit.</div>
 </div>
 </section>
 </li>
@@ -374,6 +448,7 @@ loadScripts(document, 'script');</script>
 <h3>otherTotalLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">otherTotalLabel</span></div>
+<div class="block">Label summarizing payment totals not classified as cash, debit, or credit.</div>
 </div>
 </section>
 </li>
@@ -382,6 +457,7 @@ loadScripts(document, 'script');</script>
 <h3>refreshButton</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Button</span>&nbsp;<span class="element-name">refreshButton</span></div>
+<div class="block">Button used to request a report refresh.</div>
 </div>
 </section>
 </li>
@@ -390,6 +466,7 @@ loadScripts(document, 'script');</script>
 <h3>reportStatusLabel</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.Label</span>&nbsp;<span class="element-name">reportStatusLabel</span></div>
+<div class="block">Label showing the latest load status or validation feedback.</div>
 </div>
 </section>
 </li>
@@ -398,6 +475,7 @@ loadScripts(document, 'script');</script>
 <h3>reportDatePicker</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">javafx.scene.control.DatePicker</span>&nbsp;<span class="element-name">reportDatePicker</span></div>
+<div class="block">Date selected for the report.</div>
 </div>
 </section>
 </li>
@@ -406,6 +484,7 @@ loadScripts(document, 'script');</script>
 <h3>loading</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">loading</span></div>
+<div class="block">Whether a report query is currently being loaded.</div>
 </div>
 </section>
 </li>
@@ -414,6 +493,7 @@ loadScripts(document, 'script');</script>
 <h3>reportDAO</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="../../dao/XReportDAO.html" title="class in app.dao">XReportDAO</a></span>&nbsp;<span class="element-name">reportDAO</span></div>
+<div class="block">Data-access object that retrieves hourly report rows.</div>
 </div>
 </section>
 </li>
@@ -446,6 +526,8 @@ loadScripts(document, 'script');</script>
 <h3>initialize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span>()</div>
+<div class="block">Sets the initial report date to the current Chicago date, configures the
+ table, and starts the initial load.</div>
 </div>
 </section>
 </li>
@@ -454,6 +536,7 @@ loadScripts(document, 'script');</script>
 <h3>handleRefresh</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleRefresh</span>()</div>
+<div class="block">Handles the refresh button by loading the date currently selected.</div>
 </div>
 </section>
 </li>
@@ -462,6 +545,7 @@ loadScripts(document, 'script');</script>
 <h3>clearSummary</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clearSummary</span>()</div>
+<div class="block">Resets all summary labels to indicate that totals are unavailable.</div>
 </div>
 </section>
 </li>
@@ -470,6 +554,8 @@ loadScripts(document, 'script');</script>
 <h3>configureColumns</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">configureColumns</span>()</div>
+<div class="block">Connects report values to their table columns and configures hour and
+ currency display formatting.</div>
 </div>
 </section>
 </li>
@@ -478,6 +564,12 @@ loadScripts(document, 'script');</script>
 <h3>formatCurrencyColumn</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">formatCurrencyColumn</span><wbr><span class="parameters">(javafx.scene.control.TableColumn&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&gt;&nbsp;column)</span></div>
+<div class="block">Configures a report currency column to display values using US currency
+ formatting while retaining its underlying numeric value.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - column whose cells should be formatted as currency</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -486,6 +578,12 @@ loadScripts(document, 'script');</script>
 <h3>loadReport</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">loadReport</span>()</div>
+<div class="block">Loads the selected date's report asynchronously, updates the table and
+ summaries, and displays an error alert if loading fails.
+
+ <p>Requests are ignored while a load is active. A missing date is
+ reported in the status label without starting a query. While loading,
+ date selection and refresh are disabled and are restored on completion.</p></div>
 </div>
 </section>
 </li>
@@ -494,6 +592,12 @@ loadScripts(document, 'script');</script>
 <h3>updateSummary</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateSummary</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../model/XReportRow.html" title="class in app.model">XReportRow</a>&gt;&nbsp;rows)</span></div>
+<div class="block">Sums hourly rows and writes the date-wide order, sales, tax, total, and
+ payment-method summaries to the interface.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rows</code> - hourly report rows to aggregate</dd>
+</dl>
 </div>
 </section>
 </li>

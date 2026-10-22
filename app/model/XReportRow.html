@@ -108,6 +108,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">XReportRow</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Aggregated X-report sales and payment totals for one hour of a reporting day.</div>
 </div>
 </section>
 <section class="summary">
@@ -123,28 +124,44 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#cashTotal" class="member-name-link">cashTotal</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Total amount collected from orders whose payment type is cash.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#creditTotal" class="member-name-link">creditTotal</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Total amount collected from orders whose payment type is credit.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#debitTotal" class="member-name-link">debitTotal</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Total amount collected from orders whose payment type is debit.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#hour" class="member-name-link">hour</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Hour of day represented by this row, from 0 through 23.</div>
+</div>
 <div class="col-first even-row-color"><code>private final long</code></div>
 <div class="col-second even-row-color"><code><a href="#orderCount" class="member-name-link">orderCount</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Number of orders recorded during this hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#sales" class="member-name-link">sales</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Sales revenue before tax during this hour.</div>
+</div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color"><code><a href="#tax" class="member-name-link">tax</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Sales tax collected during this hour.</div>
+</div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#total" class="member-name-link">total</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Total amount collected during this hour, including tax.</div>
+</div>
 </div>
 </section>
 </li>
@@ -164,7 +181,9 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;cashTotal,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;debitTotal,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;creditTotal)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates an hourly report row from its aggregated values.</div>
+</div>
 </div>
 </section>
 </li>
@@ -181,28 +200,44 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCashTotal()" class="member-name-link">getCashTotal</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the amount collected from cash payments during this hour.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreditTotal()" class="member-name-link">getCreditTotal</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the amount collected from credit payments during this hour.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDebitTotal()" class="member-name-link">getDebitTotal</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the amount collected from debit payments during this hour.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHour()" class="member-name-link">getHour</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the hour represented by this row.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderCount()" class="member-name-link">getOrderCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the number of orders in this hour.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSales()" class="member-name-link">getSales</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns sales revenue before tax for this hour.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTax()" class="member-name-link">getTax</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns sales tax collected during this hour.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotal()" class="member-name-link">getTotal</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the total amount collected during this hour.</div>
+</div>
 </div>
 </div>
 </div>
@@ -225,6 +260,7 @@ loadScripts(document, 'script');</script>
 <h3>hour</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">hour</span></div>
+<div class="block">Hour of day represented by this row, from 0 through 23.</div>
 </div>
 </section>
 </li>
@@ -233,6 +269,7 @@ loadScripts(document, 'script');</script>
 <h3>orderCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">orderCount</span></div>
+<div class="block">Number of orders recorded during this hour.</div>
 </div>
 </section>
 </li>
@@ -241,6 +278,7 @@ loadScripts(document, 'script');</script>
 <h3>sales</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">sales</span></div>
+<div class="block">Sales revenue before tax during this hour.</div>
 </div>
 </section>
 </li>
@@ -249,6 +287,7 @@ loadScripts(document, 'script');</script>
 <h3>tax</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">tax</span></div>
+<div class="block">Sales tax collected during this hour.</div>
 </div>
 </section>
 </li>
@@ -257,6 +296,7 @@ loadScripts(document, 'script');</script>
 <h3>total</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">total</span></div>
+<div class="block">Total amount collected during this hour, including tax.</div>
 </div>
 </section>
 </li>
@@ -265,6 +305,7 @@ loadScripts(document, 'script');</script>
 <h3>cashTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">cashTotal</span></div>
+<div class="block">Total amount collected from orders whose payment type is cash.</div>
 </div>
 </section>
 </li>
@@ -273,6 +314,7 @@ loadScripts(document, 'script');</script>
 <h3>debitTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">debitTotal</span></div>
+<div class="block">Total amount collected from orders whose payment type is debit.</div>
 </div>
 </section>
 </li>
@@ -281,6 +323,7 @@ loadScripts(document, 'script');</script>
 <h3>creditTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">creditTotal</span></div>
+<div class="block">Total amount collected from orders whose payment type is credit.</div>
 </div>
 </section>
 </li>
@@ -304,6 +347,18 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;cashTotal,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;debitTotal,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a>&nbsp;creditTotal)</span></div>
+<div class="block">Creates an hourly report row from its aggregated values.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>hour</code> - hour of day represented, from 0 through 23</dd>
+<dd><code>orderCount</code> - number of orders in the hour</dd>
+<dd><code>sales</code> - sales revenue before tax</dd>
+<dd><code>tax</code> - sales tax collected</dd>
+<dd><code>total</code> - total amount collected, including tax</dd>
+<dd><code>cashTotal</code> - amount collected for cash payments</dd>
+<dd><code>debitTotal</code> - amount collected for debit payments</dd>
+<dd><code>creditTotal</code> - amount collected for credit payments</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -320,6 +375,11 @@ loadScripts(document, 'script');</script>
 <h3>getHour</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getHour</span>()</div>
+<div class="block">Returns the hour represented by this row.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hour of day, from 0 through 23</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -328,6 +388,11 @@ loadScripts(document, 'script');</script>
 <h3>getOrderCount</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getOrderCount</span>()</div>
+<div class="block">Returns the number of orders in this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the hourly order count</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -336,6 +401,11 @@ loadScripts(document, 'script');</script>
 <h3>getSales</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getSales</span>()</div>
+<div class="block">Returns sales revenue before tax for this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly sales before tax</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -344,6 +414,11 @@ loadScripts(document, 'script');</script>
 <h3>getTax</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getTax</span>()</div>
+<div class="block">Returns sales tax collected during this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly tax amount</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -352,6 +427,11 @@ loadScripts(document, 'script');</script>
 <h3>getTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
+<div class="block">Returns the total amount collected during this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly total, including tax</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -360,6 +440,11 @@ loadScripts(document, 'script');</script>
 <h3>getCashTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getCashTotal</span>()</div>
+<div class="block">Returns the amount collected from cash payments during this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly cash total</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -368,6 +453,11 @@ loadScripts(document, 'script');</script>
 <h3>getDebitTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getDebitTotal</span>()</div>
+<div class="block">Returns the amount collected from debit payments during this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly debit total</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -376,6 +466,11 @@ loadScripts(document, 'script');</script>
 <h3>getCreditTotal</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html" title="class or interface in java.math" class="external-link">BigDecimal</a></span>&nbsp;<span class="element-name">getCreditTotal</span>()</div>
+<div class="block">Returns the amount collected from credit payments during this hour.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hourly credit total</dd>
+</dl>
 </div>
 </section>
 </li>

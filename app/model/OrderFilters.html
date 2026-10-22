@@ -104,10 +104,23 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-customerName">customerName</span></code> - optional customer-name filter</dd>
+<dd><code><span id="param-employeeId">employeeId</span></code> - optional employee ID filter</dd>
+<dd><code><span id="param-paymentType">paymentType</span></code> - optional payment-type filter</dd>
+<dd><code><span id="param-startDate">startDate</span></code> - optional inclusive earliest order date</dd>
+<dd><code><span id="param-endDate">endDate</span></code> - optional inclusive latest order date</dd>
+</dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">OrderFilters</span>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerName, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;employeeId, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentType, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate, <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Optional criteria used to search and count orders.
+
+ <p>Blank customer-name and payment-type values are normalized to <code>null</code>;
+ nonblank values are trimmed. A <code>null</code> criterion means that filter is
+ not applied.</p></div>
 </div>
 </section>
 <section class="summary">
@@ -124,27 +137,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#customerName" class="member-name-link">customerName</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>customerName</code> record component.</div>
+<div class="block">The field for the <a href="#param-customerName"><code>customerName</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#employeeId" class="member-name-link">employeeId</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>employeeId</code> record component.</div>
+<div class="block">The field for the <a href="#param-employeeId"><code>employeeId</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
 <div class="col-second even-row-color"><code><a href="#endDate" class="member-name-link">endDate</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>endDate</code> record component.</div>
+<div class="block">The field for the <a href="#param-endDate"><code>endDate</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#paymentType" class="member-name-link">paymentType</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The field for the <code>paymentType</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentType"><code>paymentType</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color"><code>private final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
 <div class="col-second even-row-color"><code><a href="#startDate" class="member-name-link">startDate</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The field for the <code>startDate</code> record component.</div>
+<div class="block">The field for the <a href="#param-startDate"><code>startDate</code></a> record component.</div>
 </div>
 </div>
 </section>
@@ -163,7 +176,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</code></div>
 <div class="col-last even-row-color">
-<div class="block">Creates an instance of a <code>OrderFilters</code> record class.</div>
+<div class="block">Normalizes the text filters when an instance is created.</div>
 </div>
 </div>
 </section>
@@ -182,17 +195,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerName()" class="member-name-link">customerName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>customerName</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-customerName"><code>customerName</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#employeeId()" class="member-name-link">employeeId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>employeeId</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-employeeId"><code>employeeId</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endDate()" class="member-name-link">endDate</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>endDate</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-endDate"><code>endDate</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -206,16 +219,18 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>private static <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#normalize(java.lang.String)" class="member-name-link">normalize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Trims a text filter and converts blank values to <code>null</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#paymentType()" class="member-name-link">paymentType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>paymentType</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentType"><code>paymentType</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startDate()" class="member-name-link">startDate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>startDate</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-startDate"><code>startDate</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -244,7 +259,7 @@ loadScripts(document, 'script');</script>
 <h3>customerName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">customerName</span></div>
-<div class="block">The field for the <code>customerName</code> record component.</div>
+<div class="block">The field for the <a href="#param-customerName"><code>customerName</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -253,7 +268,7 @@ loadScripts(document, 'script');</script>
 <h3>employeeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">employeeId</span></div>
-<div class="block">The field for the <code>employeeId</code> record component.</div>
+<div class="block">The field for the <a href="#param-employeeId"><code>employeeId</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -262,7 +277,7 @@ loadScripts(document, 'script');</script>
 <h3>paymentType</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">paymentType</span></div>
-<div class="block">The field for the <code>paymentType</code> record component.</div>
+<div class="block">The field for the <a href="#param-paymentType"><code>paymentType</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -271,7 +286,7 @@ loadScripts(document, 'script');</script>
 <h3>startDate</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name">startDate</span></div>
-<div class="block">The field for the <code>startDate</code> record component.</div>
+<div class="block">The field for the <a href="#param-startDate"><code>startDate</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -280,7 +295,7 @@ loadScripts(document, 'script');</script>
 <h3>endDate</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name">endDate</span></div>
-<div class="block">The field for the <code>endDate</code> record component.</div>
+<div class="block">The field for the <a href="#param-endDate"><code>endDate</code></a> record component.</div>
 </div>
 </section>
 </li>
@@ -301,14 +316,14 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentType,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;startDate,
  <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;endDate)</span></div>
-<div class="block">Creates an instance of a <code>OrderFilters</code> record class.</div>
+<div class="block">Normalizes the text filters when an instance is created.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>customerName</code> - the value for the <code>customerName</code> record component</dd>
-<dd><code>employeeId</code> - the value for the <code>employeeId</code> record component</dd>
-<dd><code>paymentType</code> - the value for the <code>paymentType</code> record component</dd>
-<dd><code>startDate</code> - the value for the <code>startDate</code> record component</dd>
-<dd><code>endDate</code> - the value for the <code>endDate</code> record component</dd>
+<dd><code>customerName</code> - optional customer-name filter</dd>
+<dd><code>employeeId</code> - optional employee ID filter</dd>
+<dd><code>paymentType</code> - optional payment-type filter</dd>
+<dd><code>startDate</code> - optional inclusive earliest order date</dd>
+<dd><code>endDate</code> - optional inclusive latest order date</dd>
 </dl>
 </div>
 </section>
@@ -326,6 +341,13 @@ loadScripts(document, 'script');</script>
 <h3>normalize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">normalize</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block">Trims a text filter and converts blank values to <code>null</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - text filter to normalize, possibly <code>null</code></dd>
+<dt>Returns:</dt>
+<dd>trimmed text, or <code>null</code> if the input is null or blank</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -381,10 +403,10 @@ loadScripts(document, 'script');</script>
 <h3>customerName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">customerName</span>()</div>
-<div class="block">Returns the value of the <code>customerName</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-customerName"><code>customerName</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>customerName</code> record component</dd>
+<dd>the value of the <a href="#param-customerName"><code>customerName</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -394,10 +416,10 @@ loadScripts(document, 'script');</script>
 <h3>employeeId</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">employeeId</span>()</div>
-<div class="block">Returns the value of the <code>employeeId</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-employeeId"><code>employeeId</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>employeeId</code> record component</dd>
+<dd>the value of the <a href="#param-employeeId"><code>employeeId</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -407,10 +429,10 @@ loadScripts(document, 'script');</script>
 <h3>paymentType</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">paymentType</span>()</div>
-<div class="block">Returns the value of the <code>paymentType</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-paymentType"><code>paymentType</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>paymentType</code> record component</dd>
+<dd>the value of the <a href="#param-paymentType"><code>paymentType</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -420,10 +442,10 @@ loadScripts(document, 'script');</script>
 <h3>startDate</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name">startDate</span>()</div>
-<div class="block">Returns the value of the <code>startDate</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-startDate"><code>startDate</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>startDate</code> record component</dd>
+<dd>the value of the <a href="#param-startDate"><code>startDate</code></a> record component</dd>
 </dl>
 </div>
 </section>
@@ -433,10 +455,10 @@ loadScripts(document, 'script');</script>
 <h3>endDate</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name">endDate</span>()</div>
-<div class="block">Returns the value of the <code>endDate</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-endDate"><code>endDate</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>endDate</code> record component</dd>
+<dd>the value of the <a href="#param-endDate"><code>endDate</code></a> record component</dd>
 </dl>
 </div>
 </section>

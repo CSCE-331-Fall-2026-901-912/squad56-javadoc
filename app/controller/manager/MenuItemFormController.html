@@ -111,6 +111,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">MenuItemFormController</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Manages the menu-item form, including menu item details and recipe ingredients.</div>
+<dl class="notes">
+<dt>Author:</dt>
+<dd>Olivia Tserng</dd>
+</dl>
 </div>
 </section>
 <section class="summary">
@@ -180,34 +185,54 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../model/Item.html" title="class in app.model">Item</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getItem()" class="member-name-link">getItem</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Validates the entered menu item details and creates an item with a placeholder ID.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="../../model/RecipeIngredient.html" title="class in app.model">RecipeIngredient</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRecipeIngredients()" class="member-name-link">getRecipeIngredients</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a copy of the recipe ingredients currently displayed in the table.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleAddIngredient()" class="member-name-link">handleAddIngredient</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens a dialog to select an inventory item and quantity to add as a recipe ingredient.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleNewInventoryItem()" class="member-name-link">handleNewInventoryItem</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Opens a dialog to create an inventory item and adds it to inventory when saved.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#handleRemoveIngredient()" class="member-name-link">handleRemoveIngredient</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes the selected recipe ingredient from the table, if one is selected.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>private void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initialize()" class="member-name-link">initialize</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures the table columns for displaying recipe ingredient details.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#initializeForm(java.util.Collection)" class="member-name-link">initializeForm</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>&gt;&nbsp;items)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Populates the category selector with distinct categories from the supplied menu items.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInventoryItems(java.util.List)" class="member-name-link">setInventoryItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../model/InventoryItem.html" title="class in app.model">InventoryItem</a>&gt;&nbsp;items)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the inventory items available for selection as recipe ingredients.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItem(app.model.Item)" class="member-name-link">setItem</a><wbr>(<a href="../../model/Item.html" title="class in app.model">Item</a>&nbsp;item)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Populates the form fields with the supplied menu item's values.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validateForm()" class="member-name-link">validateForm</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Validates the form by attempting to create an item and updates the error label.</div>
+</div>
 </div>
 </div>
 </div>
@@ -326,6 +351,7 @@ loadScripts(document, 'script');</script>
 <h3>initialize</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initialize</span>()</div>
+<div class="block">Configures the table columns for displaying recipe ingredient details.</div>
 </div>
 </section>
 </li>
@@ -334,6 +360,11 @@ loadScripts(document, 'script');</script>
 <h3>initializeForm</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">initializeForm</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="../../model/Item.html" title="class in app.model">Item</a>&gt;&nbsp;items)</span></div>
+<div class="block">Populates the category selector with distinct categories from the supplied menu items.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>items</code> - menu items from which to obtain categories</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -342,6 +373,13 @@ loadScripts(document, 'script');</script>
 <h3>getItem</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../model/Item.html" title="class in app.model">Item</a></span>&nbsp;<span class="element-name">getItem</span>()</div>
+<div class="block">Validates the entered menu item details and creates an item with a placeholder ID.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an item containing the validated form values</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if a name, category, or price is invalid</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -350,6 +388,11 @@ loadScripts(document, 'script');</script>
 <h3>validateForm</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">validateForm</span>()</div>
+<div class="block">Validates the form by attempting to create an item and updates the error label.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if the form values are valid; <code>false</code> otherwise</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -358,6 +401,11 @@ loadScripts(document, 'script');</script>
 <h3>setItem</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setItem</span><wbr><span class="parameters">(<a href="../../model/Item.html" title="class in app.model">Item</a>&nbsp;item)</span></div>
+<div class="block">Populates the form fields with the supplied menu item's values.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>item</code> - item whose values should populate the form</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -366,6 +414,7 @@ loadScripts(document, 'script');</script>
 <h3>handleAddIngredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleAddIngredient</span>()</div>
+<div class="block">Opens a dialog to select an inventory item and quantity to add as a recipe ingredient.</div>
 </div>
 </section>
 </li>
@@ -374,6 +423,7 @@ loadScripts(document, 'script');</script>
 <h3>handleRemoveIngredient</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleRemoveIngredient</span>()</div>
+<div class="block">Removes the selected recipe ingredient from the table, if one is selected.</div>
 </div>
 </section>
 </li>
@@ -382,6 +432,7 @@ loadScripts(document, 'script');</script>
 <h3>handleNewInventoryItem</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleNewInventoryItem</span>()</div>
+<div class="block">Opens a dialog to create an inventory item and adds it to inventory when saved.</div>
 </div>
 </section>
 </li>
@@ -390,6 +441,11 @@ loadScripts(document, 'script');</script>
 <h3>setInventoryItems</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInventoryItems</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../model/InventoryItem.html" title="class in app.model">InventoryItem</a>&gt;&nbsp;items)</span></div>
+<div class="block">Sets the inventory items available for selection as recipe ingredients.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>items</code> - inventory items to make available in the form</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -398,6 +454,11 @@ loadScripts(document, 'script');</script>
 <h3>getRecipeIngredients</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../model/RecipeIngredient.html" title="class in app.model">RecipeIngredient</a>&gt;</span>&nbsp;<span class="element-name">getRecipeIngredients</span>()</div>
+<div class="block">Returns a copy of the recipe ingredients currently displayed in the table.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new list containing the displayed recipe ingredients</dd>
+</dl>
 </div>
 </section>
 </li>
